@@ -1,0 +1,57 @@
+for f in cf*.txt
+do
+	#echo "File name is $f"
+	while IFS= read -r line
+	do
+		if [[ "$line" == "Just printing substring:"* ]]; then
+			echo "$line" | awk '{ print $11 }'
+		fi
+	done < $f
+done
+
+
+
+for f in cf*.txt
+do
+	echo "File name is $f"
+	tag=$( tail -n 1 $f )
+	#echo $tag
+	echo "$tag" | awk '{ print $5 }'
+	
+done
+
+# bash runreadfileDataLatency.sh
+# Reading files to recover only data transfer latency from all files
+
+
+
+
+
+for f in cf*.txt
+do
+	#echo "File name is $f"
+	while IFS= read -r line
+	do
+		if [[ "$line" == "Handshake complete with role :DTLS_CLIENT and hs_rtt:"* ]]; then
+			echo "$line" | awk '{ print $11 }'
+		fi
+	done < $f
+done
+
+# bash runreadfileHS.sh
+# Reading files to recover only hs_rtt from all files
+
+
+
+
+for i in $(seq 1 50)
+  do 
+     echo "Welcome $i times"
+	./dtls-client 136.159.7.172 -i identity.txt -k pskkey.txt > cf$i.txt
+ done
+
+
+# RUN : sh runtestclient.sh
+
+
+
