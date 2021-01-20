@@ -1,4 +1,4 @@
-# Scripts
+# Theory Scripts
 
 
 1. Use sed where there are patterns in the text. For example, you could replace all the negative numbers in some text that are in the form "minus-sign followed by a sequence of digits" (e.g. "-231.45") with the "accountant's brackets" form (e.g. "(231.45)") using this (which has room for improvement):
