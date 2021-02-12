@@ -10,6 +10,5 @@ do
 done
 
 # bash test3.sh
-# Reading files to recover only hs_rtt from all files
 
 
