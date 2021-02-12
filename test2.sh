@@ -9,6 +9,5 @@ do
 done
 
 # bash test2.sh
-# Reading files to recover fifth value of the line from all files (names are cf*.txt)
 
 
