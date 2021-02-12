@@ -6,4 +6,3 @@ for i in $(seq 1 50)
 
 
 # RUN : sh test4.sh
-# to run client multiple time consecutively
