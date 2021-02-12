@@ -9,6 +9,6 @@ do
 	done < $f
 done
 # bash test1.sh
-# Reading files to recover substring from all files
+
 
 
